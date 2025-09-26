@@ -375,7 +375,7 @@
   </main>
 </body>
 <script>
-  const API_BASE = '';
+  const API_BASE = 'http://82.197.92.135:5000';
   const productId = new URLSearchParams(location.search).get('id'); // or parse from path
   fetch(`${API_BASE}/api/history/${productId}`) 
 </script>
