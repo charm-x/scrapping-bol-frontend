@@ -213,7 +213,7 @@
 
     <section>
       <h3>Add Product</h3>
-      <form method="post" action="/add">
+      <form method="post" action="http://82.197.92.135:5000/add">
         <div class="grid">
           <input type="text" name="keyword" placeholder="Search keyword" required />
           <input type="url" name="product_url" placeholder="Bol.com product URL" required />
@@ -222,44 +222,6 @@
         <button type="submit">Add</button>
       </form>
     </section>
-
-    <!-- <section>
-        <h3>Global Controls</h3>
-        <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div>
-              <strong>Status:</strong> 
-              <span style="color: {{ 'green' if scheduler_status.running else 'red' }};">
-                {{ 'Running' if scheduler_status.running else 'Stopped' }}
-              </span>
-              <br>
-              <strong>Next Check:</strong> {{ scheduler_status.next_run }}
-              <br>
-              <strong>Dutch Time Now:</strong> {{ scheduler_status.dutch_time_now }}
-            </div>
-            <div style="display: flex; gap: 0.5rem;">
-              {% if scheduler_status.running %}
-                <form method="post" action="/scheduler/stop" style="margin: 0;">
-                  <button type="submit" class="contrast" style="background-color: #dc3545; color: white; padding: 0.5rem 1rem;">
-                    Stop Scheduler
-                  </button>
-                </form>
-              {% else %}
-                <form method="post" action="/scheduler/start" style="margin: 0;">
-                  <button type="submit" class="secondary" style="padding: 0.5rem 1rem;">
-                    Start Scheduler
-                  </button>
-                </form>
-              {% endif %}
-              <form method="post" action="/run-now" style="margin: 0;">
-                <button type="submit" class="secondary" style="padding: 0.5rem 1rem;">
-                  Run All Scheduled
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
     <section>
       <h3>Tracked Products</h3>
